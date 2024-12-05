@@ -123,6 +123,20 @@ public class Tile : MonoBehaviour, IClickable {
 
     #endregion
 
+    #region Added object manipulation
+
+    public void RotateAddedObject(bool turnRight) {
+        float rotationVALUE = addedGameObject.transform.rotation.y;
+        if (turnRight) {
+            rotationVALUE += 90f;
+        } else {
+            rotationVALUE += -90f;
+        }
+        addedGameObject.transform.Rotate(0, rotationVALUE, 0);
+    }
+
+    #endregion
+
     #region Adding/Removing objects
 
     public void AddObjectToTile(GameObject obj) {

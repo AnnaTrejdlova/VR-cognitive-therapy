@@ -20,5 +20,6 @@ public class ObjectPlacing : MonoBehaviour, ITileInteractionStrategy {
             return;
         }
         tile.AddObjectToTile(EditorObjectManager.Instance.GetSelectedObject());
+        TileManager.Instance.SetActiveTile(tile); 
     }
 }

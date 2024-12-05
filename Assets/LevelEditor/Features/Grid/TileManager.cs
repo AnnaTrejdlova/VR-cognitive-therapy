@@ -12,6 +12,7 @@ public class TileManager : Singleton<TileManager> {
     float tileSize = 1f;
     List<Tile> tiles = new List<Tile>();
     Dictionary<Vector2Int, Tile> tileDictionary = new Dictionary<Vector2Int, Tile>();
+    Tile activeTile; 
 
     protected override void Awake() {
         base.Awake();
@@ -70,7 +71,6 @@ public class TileManager : Singleton<TileManager> {
         return GetTilesInLine(startPos, endPos);
     }
 
-
     # region Tile interaction strategy
 
     public void TileClickHandle(Tile tile) {
@@ -120,6 +120,14 @@ public class TileManager : Singleton<TileManager> {
     }
 
     #endregion
+
+    public void SetActiveTile(Tile tile) {
+        activeTile = tile;
+    }
+
+    public Tile GetActiveTile() {
+        return activeTile;
+    }
 
 }
 
