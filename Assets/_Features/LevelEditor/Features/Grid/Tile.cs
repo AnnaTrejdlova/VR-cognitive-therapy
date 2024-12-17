@@ -10,7 +10,10 @@ public class Tile : MonoBehaviour, IClickable {
     public float sizeMultiplicator = 0.1f;
     public Material HighlightMaterial;
     public Material PreviewMaterial;
+    public Material RealMaterial;
     public Material JointPreviewMaterial;
+    public GameObject WallFillPrefab;
+    public GameObject WallJointPrefab;
 
     [Header("Walls")]
     public GameObject wallColliders;
@@ -95,7 +98,7 @@ public class Tile : MonoBehaviour, IClickable {
         }
     }
 
-    void MoveWallByOrientation(GameObject wall, TileWallPosition orientation) {
+    public void MoveWallByOrientation(GameObject wall, TileWallPosition orientation) {
         switch (orientation) {
             case TileWallPosition.Left:
                 wall.transform.position += new Vector3(-0.5f,0,0f);

@@ -23,6 +23,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 128904554}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -33,7 +34,6 @@ Transform:
   - {fileID: 1324170028470495125}
   - {fileID: 3529375750491640239}
   m_Father: {fileID: 1391382821597692712}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &597278411616646668
 GameObject:
@@ -63,13 +63,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 597278411616646668}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.25, y: 0, z: -0.25}
   m_LocalScale: {x: 0.5, y: 1, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 128904555}
-  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7623745767979105345
 MeshFilter:
@@ -147,9 +147,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 597278411616646668}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2748263973985546629
@@ -166,6 +174,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: 3
   HighlightMaterial: {fileID: 2100000, guid: 2d12dec9c01059946a53a461902d2030, type: 2}
+  JointPrefab: {fileID: 0}
+  JointMaterial: {fileID: 0}
+  relatedTile: {fileID: 0}
   positionInTile: {x: 0, y: 0}
 --- !u!1 &1391382821597692706
 GameObject:
@@ -195,6 +206,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1391382821597692706}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.01, z: 0}
   m_LocalScale: {x: 1, y: 0.01, z: 1}
@@ -202,7 +214,6 @@ Transform:
   m_Children:
   - {fileID: 128904555}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1391382821597692711
 MeshFilter:
@@ -269,8 +280,13 @@ MonoBehaviour:
   sizeMultiplicator: 1
   HighlightMaterial: {fileID: 2100000, guid: 2d12dec9c01059946a53a461902d2030, type: 2}
   PreviewMaterial: {fileID: 2100000, guid: 9dea06a150486db46ae7a369d7f2d452, type: 2}
+  RealMaterial: {fileID: 2100000, guid: 094ef5c624769db4aa07a306d5506573, type: 2}
   JointPreviewMaterial: {fileID: 2100000, guid: 747f39d523af18846801e08f3d2a4fbc,
     type: 2}
+  WallFillPrefab: {fileID: 6837552707209018026, guid: 6d8493305f0d45c42b2a575131768c56,
+    type: 3}
+  WallJointPrefab: {fileID: 1845017319667149471, guid: 852b0ef3651429248b52334dd7083584,
+    type: 3}
   wallColliders: {fileID: 128904554}
   tileOrientationPositions:
   - state: 0
@@ -290,6 +306,7 @@ MonoBehaviour:
   - state: 3
     position: {x: -0.25, y: 0, z: -0.25}
   clickedTile: {fileID: 0}
+  hoveredTile: {fileID: 0}
 --- !u!114 &1391382821597692707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -316,9 +333,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1391382821597692706}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4037416050554869825
@@ -349,13 +374,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4037416050554869825}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.25, y: 0, z: -0.25}
   m_LocalScale: {x: 0.5, y: 1, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 128904555}
-  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1114190051979820749
 MeshFilter:
@@ -433,9 +458,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4037416050554869825}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &3377418244559742621
@@ -452,6 +485,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: 4
   HighlightMaterial: {fileID: 2100000, guid: 2d12dec9c01059946a53a461902d2030, type: 2}
+  JointPrefab: {fileID: 0}
+  JointMaterial: {fileID: 0}
+  relatedTile: {fileID: 0}
   positionInTile: {x: 1, y: 0}
 --- !u!1 &4312884294706514601
 GameObject:
@@ -481,13 +517,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4312884294706514601}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.25, y: 0, z: 0.25}
   m_LocalScale: {x: 0.5, y: 1, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 128904555}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1526867895946773711
 MeshFilter:
@@ -565,9 +601,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4312884294706514601}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &1333568349910083073
@@ -584,6 +628,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: 2
   HighlightMaterial: {fileID: 2100000, guid: 2d12dec9c01059946a53a461902d2030, type: 2}
+  JointPrefab: {fileID: 0}
+  JointMaterial: {fileID: 0}
+  relatedTile: {fileID: 0}
   positionInTile: {x: 1, y: 1}
 --- !u!1 &7902628744301201324
 GameObject:
@@ -613,13 +660,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7902628744301201324}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.25, y: 0, z: 0.25}
   m_LocalScale: {x: 0.5, y: 1, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 128904555}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8415299551167315785
 MeshFilter:
@@ -697,9 +744,17 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7902628744301201324}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
+  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 2
+  serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &373035673110819390
@@ -716,4 +771,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   position: 1
   HighlightMaterial: {fileID: 2100000, guid: 2d12dec9c01059946a53a461902d2030, type: 2}
+  JointPrefab: {fileID: 0}
+  JointMaterial: {fileID: 0}
+  relatedTile: {fileID: 0}
   positionInTile: {x: 0, y: 1}
